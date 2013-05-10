@@ -15,6 +15,7 @@ public class Listing extends javax.swing.JFrame {
      */
     public Listing() {
         initComponents();
+        this.addWindowListener(new WindowListenerClose());
     }
 
     /**
@@ -41,7 +42,7 @@ public class Listing extends javax.swing.JFrame {
         livraisondate = new javax.swing.JMenuItem();
         quitter = new javax.swing.JMenu();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setBounds(new java.awt.Rectangle(300, 100, 0, 0));
         setResizable(false);
 
