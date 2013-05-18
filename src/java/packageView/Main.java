@@ -4,16 +4,15 @@
  */
 package packageView;
 
-import java.awt.FlowLayout;
-import java.awt.Font;
-import javax.swing.*;
 
 /**
  *
  * @author Charley
  */
 public class Main extends javax.swing.JFrame {
-    
+  ThreadBouncing myThreadBouncing = new ThreadBouncing();
+        
+   
 
     /**
      * Creates new form Main
@@ -21,6 +20,8 @@ public class Main extends javax.swing.JFrame {
     public Main() {
         initComponents();
         this.addWindowListener(new WindowListenerClose());
+        //ThreadBouncing.startAnimation();
+  
     }
 
     /**
@@ -187,7 +188,8 @@ public class Main extends javax.swing.JFrame {
     private void quitterMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quitterMousePressed
         System.exit(0);
     }//GEN-LAST:event_quitterMousePressed
-
+    
+    
     /**
      * @param args the command line arguments
      */

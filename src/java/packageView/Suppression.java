@@ -5,7 +5,7 @@
 package packageView;
 
 import javax.swing.JOptionPane;
-
+import Controller.Controller;
 /**
  *
  * @author Charley
@@ -16,8 +16,12 @@ public class Suppression extends javax.swing.JFrame {
      * Creates new form Suppression
      */
     public Suppression() {
-        this.addWindowListener(new WindowListenerClose());
         initComponents();
+        this.addWindowListener(new WindowListenerClose());
+        Controller controller = new Controller();
+        
+        
+        
     }
 
     /**

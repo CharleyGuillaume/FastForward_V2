@@ -18,9 +18,9 @@ public class Colis {
     private int enl_accepte;
     private int enl_raison_refus;
     private int liv_accepte;
-    private int liv_raison_refus;
+    private String liv_raison_refus;
 
-    public Colis(int idnumero, boolean fragile, int libelle, int poids, int dimensions, int enl_accepte, int enl_raison_refus, int liv_accepte, int liv_raison_refus) {
+    public Colis(int idnumero, boolean fragile, int libelle, int poids, int dimensions, int enl_accepte, int enl_raison_refus, int liv_accepte, String liv_raison_refus) {
         this.idnumero = idnumero;
         this.fragile = fragile;
         this.libelle = libelle;
@@ -88,11 +88,11 @@ public class Colis {
         this.liv_accepte = liv_accepte;
     }
 
-    public int getLiv_raison_refus() {
+    public String getLiv_raison_refus() {
         return liv_raison_refus;
     }
 
-    public void setLiv_raison_refus(int liv_raison_refus) {
+    public void setLiv_raison_refus(String liv_raison_refus) {
         this.liv_raison_refus = liv_raison_refus;
     }
 
