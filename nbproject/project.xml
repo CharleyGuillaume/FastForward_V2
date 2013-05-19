@@ -12,6 +12,17 @@
                 <root id="test.src.dir"/>
             </test-roots>
             <included-library dirs="200">libs.absolutelayout.classpath</included-library>
+            <included-library dirs="100">reference.scout.dist</included-library>
         </data>
+        <references xmlns="http://www.netbeans.org/ns/ant-project-references/1">
+            <reference>
+                <foreign-project>scout</foreign-project>
+                <artifact-type>jar</artifact-type>
+                <script>build.xml</script>
+                <target>dist</target>
+                <clean-target>clean</clean-target>
+                <id>dist</id>
+            </reference>
+        </references>
     </configuration>
 </project>

@@ -4,9 +4,21 @@
  */
 package packageBusiness;
 
+import packageDataAccess.*;
+import packageException.ExceptionData;
+import model.*;
+import java.util.ArrayList;
+
 /**
  *
  * @author Charley
  */
 public class Manager {
+    private DbAccess dba;
+    
+    public Manager() {
+        dba = new DbAccess;
+    }
+    
+    public Users CheckLogin
 }

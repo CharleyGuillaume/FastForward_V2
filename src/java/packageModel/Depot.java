@@ -1,56 +1,52 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package packageModel;
 
-/**
- *
- * @author Charley
- */
 public class Depot {
 
-    private int idnumero;
-    private int libelle;
-    private int dispatch;
-    private int infos_pratiques;
+    private Integer idnumero;
+    private String libelle;
+    private boolean dispatch;
+    private String infos_pratiques;
 
-    public Depot(int idnumero, int libelle, int dispatch, int infos_pratiques) {
+    public Depot(){
+        
+    }
+    
+    public Depot(Integer idnumero, String libelle, boolean dispatch, String infos_pratiques) {
         this.idnumero = idnumero;
         this.libelle = libelle;
         this.dispatch = dispatch;
         this.infos_pratiques = infos_pratiques;
     }
-
-    public int getDispatch() {
-        return dispatch;
-    }
-
-    public void setDispatch(int dispatch) {
-        this.dispatch = dispatch;
-    }
-
-    public int getIdnumero() {
+    
+    public Integer getIdnumero() {
         return idnumero;
     }
 
-    public void setIdnumero(int idnumero) {
+    public void setIdnumero(Integer idnumero) {
         this.idnumero = idnumero;
     }
-
-    public int getInfos_pratiques() {
-        return infos_pratiques;
-    }
-
-    public void setInfos_pratiques(int infos_pratiques) {
-        this.infos_pratiques = infos_pratiques;
-    }
-
-    public int getLibelle() {
+    
+    public String getLibelle() {
         return libelle;
     }
 
-    public void setLibelle(int libelle) {
+    public void setLibelle(String libelle) {
         this.libelle = libelle;
+    }
+
+    public boolean getDispatch() {
+        return dispatch;
+    }
+
+    public void setDispatch(boolean dispatch) {
+        this.dispatch = dispatch;
+    }
+
+    public String getInfos_pratiques() {
+        return infos_pratiques;
+    }
+
+    public void setInfos_pratiques(String infos_pratiques) {
+        this.infos_pratiques = infos_pratiques;
     }
 }

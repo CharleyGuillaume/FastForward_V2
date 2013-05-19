@@ -15,73 +15,74 @@ import javax.swing.table.AbstractTableModel;
  *
  * @author Charley
  */
-public class LivraisonModel extends AbstractTableModel{
+public class ColisModel extends AbstractTableModel{
     private ArrayList<String> columnNames = new ArrayList<String>();
-    private ArrayList<Livraison> contents = new ArrayList<Livraison>();
+    private ArrayList<Colis> contents = new ArrayList<Colis>();
     
-    public LivraisonModel(ArrayList<Livraison> livraison){
-        this.contents = livraison;
+    public ColisModel(ArrayList<Colis> colis){
+        this.contents = colis;
         this.columnNames.add("Numéro");
-        this.columnNames.add("Date de demande");
-        this.columnNames.add("Date de dépôt");
-        this.columnNames.add("Date d'enlèvement");
-        this.columnNames.add("Prix livraison");
-        this.columnNames.add("Livraison payée");
-        this.columnNames.add("Date payement livraison");
-        this.columnNames.add("Montant contre remboursement");
-        this.columnNames.add("Contre-remboursement destinataire payé");
-        this.columnNames.add("Date paiement contre remboursement destinataire");
-        this.columnNames.add("Date paiement contre remboursement expéditeur payé");
-        this.columnNames.add("date paiement contre remboursement");
-        this.columnNames.add("Etat");
+        this.columnNames.add("Libellé");
+        this.columnNames.add("Poids");
+        this.columnNames.add("Fragile");
+        this.columnNames.add("Dimensions");
+        this.columnNames.add("Enlèvement accepté");
+        this.columnNames.add("Raison refus enlèvement");
+        this.columnNames.add("livraison acceptée");
+        this.columnNames.add("raison refus livraison");
     }
+   
+
     @Override
     public int getColumnCount() {
         return columnNames.size();
     }
     
-     @Override
+
+    @Override
     public int getRowCount() {
         return contents.size();
     }
+
 
     @Override
     public String getColumnName(int index) {
         return columnNames.get(index);
     }
     
+
     @Override
     public Object getValueAt(int row, int col) {
-        Livraison liv = contents.get(row);
+        Colis colis = contents.get(row);
         Controller controller = new Controller();
         try {
             switch (col) {
                 case 0:
-                    return liv;
+                    return colis;
                 case 1:
-                    return liv;
+                    return colis;
                 case 2:
-                    return liv;
+                    return colis;
                 case 3:
-                    return liv;
+                    return colis;
                 case 4:
-                    return liv;
+                    return colis;
                 case 5:
-                    return liv;
+                    return colis;
                 case 6:
-                    return liv;
+                    return colis;
                 case 7:
-                    return liv;
+                    return colis;
                 case 8:
-                    return liv;
+                    return colis;
                 case 9:
-                    return liv;
+                    return colis;
                 case 10:
-                    return liv;
+                    return colis;
                 case 11:
-                    return liv;
+                    return colis;
                 case 12:
-                    return liv;
+                    return colis;
                 default:
                     return null;
                         }
@@ -91,7 +92,7 @@ public class LivraisonModel extends AbstractTableModel{
         }
         return null;
     }
-    
+
     @Override
     public Class getColumnClass(int col) {
         switch (col) {

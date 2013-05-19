@@ -1,90 +1,107 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package packageModel;
 
-/**
- *
- * @author Charley
- */
+import java.util.GregorianCalendar;
+
 public class Colis {
 
-    private int idnumero;
+    private Integer idnumero,num_livraison;
+    private String libelle;
+    private double poids;
     private boolean fragile;
-    private int libelle;
-    private int poids;
-    private int dimensions;
-    private int enl_accepte;
-    private int enl_raison_refus;
-    private int liv_accepte;
+    private double hauteur;
+    private double largeur;
+    private double profondeur;
+    private GregorianCalendar date_peremption;
+    private boolean liv_accepte;
     private String liv_raison_refus;
 
-    public Colis(int idnumero, boolean fragile, int libelle, int poids, int dimensions, int enl_accepte, int enl_raison_refus, int liv_accepte, String liv_raison_refus) {
+    public Colis(){
+        
+    }
+    
+    public Colis(Integer idnumero,Integer numliv, boolean fragile, String libelle, double poids, double hauteur, double largeur, double profondeur, boolean liv_accepte, String liv_raison_refus) {
         this.idnumero = idnumero;
-        this.fragile = fragile;
+        this.num_livraison=numliv;
         this.libelle = libelle;
         this.poids = poids;
-        this.dimensions = dimensions;
-        this.enl_accepte = enl_accepte;
-        this.enl_raison_refus = enl_raison_refus;
+        this.fragile = fragile;
+        this.hauteur = hauteur;
+        this.largeur = largeur;
+        this.profondeur = profondeur;
+        this. date_peremption = date_peremption;
         this.liv_accepte = liv_accepte;
         this.liv_raison_refus = liv_raison_refus;
     }
 
-    public int getDimensions() {
-        return dimensions;
+    public Integer getIdnumero() {
+        return idnumero;
     }
 
-    public void setDimensions(int dimensions) {
-        this.dimensions = dimensions;
+    public void setIdnumero(Integer idnumero) {
+        this.idnumero = idnumero;
+    }
+    
+    public String getLibelle() {
+        return libelle;
     }
 
-    public int getEnl_accepte() {
-        return enl_accepte;
+    public void setLibelle(String libelle) {
+        this.libelle = libelle;
+    }
+    
+    public double getPoids() {
+        return poids;
     }
 
-    public void setEnl_accepte(int enl_accepte) {
-        this.enl_accepte = enl_accepte;
+    public void setPoids(double poids) {
+        this.poids = poids;
     }
-
-    public int getEnl_raison_refus() {
-        return enl_raison_refus;
-    }
-
-    public void setEnl_raison_refus(int enl_raison_refus) {
-        this.enl_raison_refus = enl_raison_refus;
-    }
-
-    public boolean isFragile() {
+    
+    public boolean getFragile() {
         return fragile;
     }
 
     public void setFragile(boolean fragile) {
         this.fragile = fragile;
     }
-
-    public int getIdnumero() {
-        return idnumero;
+    
+    public double getHauteur() {
+        return hauteur;
     }
 
-    public void setIdnumero(int idnumero) {
-        this.idnumero = idnumero;
+    public void setHauteur(double hauteur) {
+        this.hauteur = hauteur;
+    }
+    
+    public double getLargeur() {
+        return largeur;
     }
 
-    public int getLibelle() {
-        return libelle;
+    public void setLargeur(double largeur) {
+        this.largeur = largeur;
+    }
+    
+    public double getProfondeur() {
+        return profondeur;
     }
 
-    public void setLibelle(int libelle) {
-        this.libelle = libelle;
+    public void setProfondeur(double profondeur) {
+        this.profondeur = profondeur;
+    }
+    
+    public GregorianCalendar getDate_peremption() {
+        return date_peremption;
     }
 
-    public int getLiv_accepte() {
+    public void setDate_peremption(GregorianCalendar date_peremption) {
+        this.date_peremption = date_peremption;
+    }
+
+    public boolean getLiv_accepte() {
         return liv_accepte;
     }
 
-    public void setLiv_accepte(int liv_accepte) {
+    public void setLiv_accepte(boolean liv_accepte) {
         this.liv_accepte = liv_accepte;
     }
 
@@ -94,13 +111,13 @@ public class Colis {
 
     public void setLiv_raison_refus(String liv_raison_refus) {
         this.liv_raison_refus = liv_raison_refus;
+    } 
+    
+    public Integer getNum_livraison() {
+        return num_livraison;
     }
 
-    public int getPoids() {
-        return poids;
-    }
-
-    public void setPoids(int poids) {
-        this.poids = poids;
+    public void setNum_livraison(Integer num_livraison) {
+        this.num_livraison = num_livraison;
     }
 }

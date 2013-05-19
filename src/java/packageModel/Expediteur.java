@@ -1,46 +1,41 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package packageModel;
 
-/**
- *
- * @author Charley
- */
 public class Expediteur {
 
-    private int idnumero;
-    private int num_compte;
-    private int fax;
+    private Integer idnumero;
+    private Integer num_compte;
+    private Integer fax;
 
-    public Expediteur(int idnumero, int num_compte, int fax) {
+    public Expediteur (){
+        
+    }
+    
+    public Expediteur(Integer idnumero, Integer num_compte, Integer fax) {
         this.idnumero = idnumero;
         this.num_compte = num_compte;
         this.fax = fax;
     }
-
-    public int getFax() {
-        return fax;
-    }
-
-    public void setFax(int fax) {
-        this.fax = fax;
-    }
-
-    public int getIdnumero() {
+ 
+    public Integer getIdnumero() {
         return idnumero;
     }
 
-    public void setIdnumero(int idnumero) {
+    public void setIdnumero(Integer idnumero) {
         this.idnumero = idnumero;
     }
 
-    public int getNum_compte() {
+    public Integer getNum_compte() {
         return num_compte;
     }
 
-    public void setNum_compte(int num_compte) {
+    public void setNum_compte(Integer num_compte) {
         this.num_compte = num_compte;
+    }
+    public Integer getFax() {
+        return fax;
+    }
+
+    public void setFax(Integer fax) {
+        this.fax = fax;
     }
 }
