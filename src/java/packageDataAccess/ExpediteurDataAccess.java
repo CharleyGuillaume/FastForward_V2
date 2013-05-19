@@ -21,5 +21,13 @@ public class ExpediteurDataAccess {
         connection = ConnexionSingleton.getInstance();
     }
     
-   
+    public ArrayList<Expediteur> getAllExpediteurs() throws ExceptionData{
+        
+        ArrayList <Expediteur> allExpediteur = new ArrayList <Expediteur>();
+        
+        // A FINIR
+        
+        return allExpediteur;
+    
+    }
 }
